@@ -1,5 +1,5 @@
-FROM mjgargani/puppeteer:trybe1.0 AS build
+FROM mjgargani/puppeteer:trybe1.0
  WORKDIR /tests
  COPY . .
  ADD node_modules.tar.gz ./
- ENTRYPOINT [ "npm", "start" ]
+ ENTRYPOINT [ "npm", "test" ]
