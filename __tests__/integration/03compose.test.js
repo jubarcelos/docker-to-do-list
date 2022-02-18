@@ -68,7 +68,6 @@ describe(requirements[11].description, () => {
         }
 
         const { stderr: testOutput } = await readCommand(false, 'docker logs $(docker ps -aqf name=todotests_1)');
-        console.log(testOutput);
         if (testOutput.includes('7 passed, 7 total')) {
           return testAprove(true);
         }
